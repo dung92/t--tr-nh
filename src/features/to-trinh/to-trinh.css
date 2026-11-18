@@ -1,0 +1,1094 @@
+/* SINH TỰ ĐỘNG bởi tools/gen-to-trinh-css.cjs từ CSS đang áp dụng cho tab “Tờ trình / Đề xuất / Thẩm định” trong prototype V41
+   (app Ký số S7_KYSO_B64 + CSS lớp v23_07112026 mà V41 chèn vào khung). Không sửa tay – sửa nguồn rồi sinh lại.
+   155 luật, đúng thứ tự cascade gốc. Mọi selector nằm dưới .kyso-tt nên không ảnh hưởng phần khác của ứng dụng. */
+
+.kyso-tt {
+  container-type: inline-size; /* @container dưới đây thay cho @media trong khung iframe */
+}
+
+.kyso-tt {
+  --pri: #00A991;
+  --pri-press: #008774;
+  --pri-dark: #006557;
+  --sb: #004C41;
+  --pri-light: #E6F6F4;
+  --tx: #202A36;
+  --tx2: #687585;
+  --ph: #96A0AD;
+  --ph-in: #929494;
+  --tx-in: #2F2F2F;
+  --grey: #696969;
+  --menu-group: #D1D1D1;
+  --on-dark: #F0F0F0;
+  --bd: #E3E8ED;
+  --bd-in: #D6DEE5;
+  --div: #EAECF0;
+  --bd-dark: #809D9A;
+  --page: #F7F8FA;
+  --subtle: #F6F8FA;
+  --dis: #F4F6F6;
+  --dis-tx: #B7B9B9;
+  --ro: #F0F0F0;
+  --link: #0562A8;
+  --orange: #F06800;
+  --red: #E5372B;
+  --red-l: #FDECEA;
+  --amber-l: #FEF9E7;
+  --yellow: #E5C10B;
+  --blue-l: #E8F0FB;
+}
+
+.kyso-tt,
+.kyso-tt * {
+  box-sizing: border-box;
+}
+
+.kyso-tt {
+  margin: 0px;
+}
+
+.kyso-tt {
+  font-family: Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--tx);
+  background: var(--page);
+  -webkit-font-smoothing: antialiased;
+}
+
+.kyso-tt button,
+.kyso-tt input,
+.kyso-tt select {
+  font: inherit;
+  color: inherit;
+}
+
+.kyso-tt button {
+  cursor: pointer;
+}
+
+.kyso-tt svg.i {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  stroke: currentcolor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.kyso-tt .btn {
+  height: 36px;
+  padding: 0px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--bd);
+  background: rgb(255, 255, 255);
+  color: var(--tx);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.kyso-tt .btn:hover {
+  background: var(--subtle);
+  border-color: var(--bd-in);
+}
+
+.kyso-tt .btn.pri {
+  background: var(--pri-dark);
+  border-color: var(--pri-dark);
+  color: rgb(255, 255, 255);
+}
+
+.kyso-tt .btn.pri:hover {
+  background: rgb(0, 87, 74);
+}
+
+.kyso-tt .icb {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 0px;
+  background: transparent;
+  display: inline-grid;
+  place-items: center;
+  color: var(--tx2);
+  padding: 0px;
+}
+
+.kyso-tt .icb:hover {
+  background: var(--subtle);
+  color: var(--tx);
+}
+
+.kyso-tt .icb.red {
+  color: var(--red);
+}
+
+.kyso-tt .icb svg.i {
+  width: 18px;
+  height: 18px;
+}
+
+.kyso-tt .lnk {
+  color: var(--link);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: 0px;
+  padding: 0px;
+  font: inherit;
+  text-align: left;
+}
+
+.kyso-tt .card {
+  background: rgb(255, 255, 255);
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+}
+
+.kyso-tt .cb {
+  padding: 12px;
+}
+
+.kyso-tt .note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--amber-l);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: rgb(92, 74, 0);
+}
+
+.kyso-tt .note svg {
+  color: var(--orange);
+  margin-top: 2px;
+}
+
+.kyso-tt .note.t {
+  background: var(--pri-light);
+  color: rgb(11, 79, 69);
+}
+
+.kyso-tt .note.t svg {
+  color: var(--pri);
+}
+
+.kyso-tt .note.r {
+  background: var(--red-l);
+  color: rgb(158, 36, 27);
+}
+
+.kyso-tt .note.r svg {
+  color: var(--red);
+}
+
+.kyso-tt .muted {
+  color: var(--tx2);
+}
+
+.kyso-tt .bd {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  background: rgb(240, 240, 240);
+  color: var(--tx2);
+}
+
+.kyso-tt .bd.g {
+  background: rgb(227, 244, 236);
+  color: rgb(30, 123, 78);
+}
+
+.kyso-tt .bd.r {
+  background: var(--red-l);
+  color: var(--red);
+}
+
+.kyso-tt .bd.n {
+  background: rgb(240, 240, 240);
+  color: var(--tx2);
+}
+
+.kyso-tt .dl {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.kyso-tt .dl::before {
+  content: "●";
+  margin-right: 6px;
+}
+
+.kyso-tt .c-or {
+  color: var(--orange);
+}
+
+.kyso-tt .f {
+  position: relative;
+  display: block;
+  min-width: 0px;
+  margin: 0px;
+}
+
+.kyso-tt .f .fl {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  max-width: calc(100% - 44px);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ph-in);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+  transition: top 0.15s ease-out, left 0.15s ease-out, font-size 0.15s ease-out, line-height 0.15s ease-out, color 0.15s ease-out;
+}
+
+.kyso-tt .f:focus-within .fl {
+  top: -8px;
+  left: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0px 4px;
+  background: rgb(255, 255, 255);
+  color: var(--grey);
+  max-width: calc(100% - 16px);
+}
+
+.kyso-tt .f:focus-within .fl {
+  color: var(--pri);
+}
+
+.kyso-tt .tw {
+  border: 1px solid var(--div);
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.kyso-tt .tb {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.kyso-tt .tb th {
+  background: rgb(255, 255, 255);
+  text-align: left;
+  font-weight: 600;
+  color: var(--tx);
+  padding: 0px 12px;
+  height: 50px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--div);
+}
+
+.kyso-tt .tb td {
+  padding: 8px 12px;
+  height: 55px;
+  border-bottom: 1px solid var(--div);
+  vertical-align: middle;
+  color: var(--tx);
+}
+
+.kyso-tt .tb tbody tr:last-child td {
+  border-bottom: 0px;
+}
+
+.kyso-tt .tb tbody tr:hover td {
+  background: rgb(250, 251, 252);
+}
+
+.kyso-tt .tb .sub {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tx2);
+  margin-top: 2px;
+}
+
+.kyso-tt .tb .clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kyso-tt .tb .nw {
+  white-space: nowrap;
+}
+
+.kyso-tt .tb .empty {
+  text-align: center;
+  color: var(--tx2);
+  height: 72px;
+}
+
+.kyso-tt .acts {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.kyso-tt .tabpane {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kyso-tt .tabpane.on {
+  display: flex;
+}
+
+.kyso-tt .seg {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.kyso-tt .seg button {
+  height: 36px;
+  border: 1px solid var(--bd);
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 0px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--tx2);
+}
+
+.kyso-tt .seg button.on {
+  border-color: var(--pri);
+  color: var(--pri-press);
+  background: rgb(242, 251, 249);
+  font-weight: 600;
+}
+
+.kyso-tt .dd {
+  position: relative;
+}
+
+.kyso-tt .dd-menu {
+  position: absolute;
+  right: 0px;
+  top: calc(100% + 6px);
+  background: rgb(255, 255, 255);
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  box-shadow: rgba(16, 24, 40, 0.12) 0px 10px 30px;
+  min-width: 300px;
+  padding: 8px;
+  display: none;
+  z-index: 15;
+  text-align: left;
+  font-weight: 400;
+}
+
+.kyso-tt .dd.open .dd-menu {
+  display: block;
+}
+
+.kyso-tt .dd-menu .mi {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--tx);
+}
+
+.kyso-tt .dd-menu .mi b {
+  font-weight: 600;
+}
+
+.kyso-tt .dd-menu .mi span {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tx2);
+  white-space: normal;
+}
+
+.kyso-tt .dd-menu .mi:hover {
+  background: var(--pri-light);
+  color: var(--pri-press);
+}
+
+.kyso-tt .dd-menu .mi.dis {
+  color: var(--dis-tx);
+  cursor: default;
+}
+
+.kyso-tt .dd-menu .mi.dis:hover {
+  background: none;
+  color: var(--dis-tx);
+}
+
+.kyso-tt .dd-menu .sepm {
+  height: 1px;
+  background: var(--div);
+  margin: 6px 4px;
+}
+
+.kyso-tt .empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--tx2);
+}
+
+.kyso-tt .pv {
+  position: sticky;
+  top: 76px;
+}
+
+@container (max-width: 959px) {
+  .kyso-tt .pv {
+    position: static;
+  }
+  }
+
+.kyso-tt .tb tr.mine td:first-child {
+  box-shadow: inset 3px 0 0 var(--pri);
+}
+
+.kyso-tt .bd.sm {
+  padding: 2px 6px;
+}
+
+.kyso-tt .v-detail > .t-totrinh > .card:first-child {
+  margin-top: 0px;
+}
+
+.kyso-tt .pv {
+  position: static !important;
+}
+
+.kyso-tt .dd-menu .mi b .bd {
+  align-items: center;
+  border-radius: 4px;
+  vertical-align: 1px;
+  white-space: nowrap;
+  display: inline-flex !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  padding: 0px 6px !important;
+  margin-left: 6px !important;
+}
+
+.kyso-tt .dd-menu .mi.dis {
+  cursor: not-allowed;
+}
+
+.kyso-tt .dd-menu .mi.dis b,
+.kyso-tt .dd-menu .mi.dis span {
+  color: var(--dis-tx);
+}
+
+.kyso-tt {
+  --pri: #00A991;
+  --pri-press: #008774;
+  --pri-dark: #006557;
+  --sb: #004C41;
+  --pri-light: #E6F6F4;
+  --tx: #202A36;
+  --tx2: #687585;
+  --ph: #96A0AD;
+  --ph-in: #929494;
+  --tx-in: #2F2F2F;
+  --grey: #696969;
+  --bd: #E3E8ED;
+  --bd-in: #D6DEE5;
+  --div: #EAECF0;
+  --bd-dark: #2F6B61;
+  --page: #F7F8FA;
+  --subtle: #F6F8FA;
+  --ro: #F0F0F0;
+  --th: #E9E9E9;
+  --link: #0562A8;
+  --orange: #F06800;
+  --red: #E5372B;
+  --red-l: #FDECEA;
+  --amber-l: #FEF9E7;
+  --blue-l: #E3ECF8;
+  --sec-bd: #BFE6E0;
+  --row-hl: #FFF8E6;
+  --notice-bg: #FDF0D5;
+  --notice-tx: #7A5414;
+  --v23-th: 0px;
+  --v23-tb: 0px;
+}
+
+.kyso-tt {
+  color: var(--tx);
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+.kyso-tt .v23-tb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0px 0px 12px;
+  background: rgb(255, 255, 255);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.kyso-tt .v23-tb .l,
+.kyso-tt .v23-tb .r {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kyso-tt .v23-tb .r {
+  min-width: 0px;
+}
+
+.kyso-tt .v23-tb .l {
+  flex: 1 1 360px;
+  flex-wrap: nowrap !important;
+}
+
+.kyso-tt .v23-tb .r {
+  flex: 0 1 auto;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.kyso-tt .v23-q {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 1 320px;
+  min-width: 170px;
+  max-width: 100%;
+  height: 36px;
+  border: 1px solid var(--bd-in);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  padding: 0px 10px 0px 34px;
+}
+
+.kyso-tt .v23-q svg {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  width: 16px;
+  height: 16px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-q input {
+  border: 0px;
+  outline: 0px;
+  background: transparent;
+  width: 100%;
+  font: 14px / 20px Inter, system-ui, sans-serif;
+  color: var(--tx-in);
+}
+
+.kyso-tt .v23-q input::placeholder {
+  color: var(--ph-in);
+}
+
+.kyso-tt .v23-q:focus-within {
+  border-color: var(--pri);
+}
+
+.kyso-tt .v23-sel {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+}
+
+.kyso-tt .v23-sel select {
+  appearance: none;
+  height: 36px;
+  border: 1px solid var(--bd-in);
+  border-radius: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23202A36' stroke-width='1.8'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 10px center no-repeat rgb(255, 255, 255);
+  padding: 0px 34px 0px 12px;
+  font: 14px / 20px Inter, system-ui, sans-serif;
+  color: var(--tx-in);
+  max-width: 280px;
+  cursor: pointer;
+}
+
+.kyso-tt .v23-sel select:focus {
+  outline: 0px;
+  border-color: var(--pri);
+}
+
+.kyso-tt .v23-sel.on select {
+  border-color: var(--pri);
+  background-color: var(--pri-light);
+  color: var(--pri-press);
+  font-weight: 600;
+}
+
+.kyso-tt .v23-advb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0px 12px;
+  border: 1px solid var(--bd-in);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  color: var(--tx);
+  font: 600 14px / 20px Inter, system-ui, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.kyso-tt .v23-advb svg {
+  width: 16px;
+  height: 16px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-advb .n {
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--pri-dark);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0px 6px;
+  display: none;
+}
+
+.kyso-tt .v23-advb.has .n {
+  display: inline-block;
+}
+
+.kyso-tt .v23-advb[aria-expanded="true"] {
+  border-color: var(--pri);
+  background: var(--pri-light);
+  color: var(--pri-press);
+}
+
+.kyso-tt .v23-advb[aria-expanded="true"] svg {
+  color: var(--pri-press);
+}
+
+.kyso-tt .v23-cr {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0px 0px 12px;
+  font: 14px / 20px Inter, system-ui, sans-serif;
+}
+
+.kyso-tt .v23-cr.on {
+  display: flex;
+}
+
+.kyso-tt .v23-cr .lb {
+  font-size: 12px;
+  color: var(--tx2);
+  font-weight: 500;
+}
+
+.kyso-tt .v23-ch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pri-light);
+  color: var(--pri-press);
+  border: 1px solid var(--sec-bd);
+  border-radius: 4px;
+  padding: 1px 4px 1px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  max-width: 360px;
+}
+
+.kyso-tt .v23-ch span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kyso-tt .v23-ch button {
+  border: 0px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0px 2px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+}
+
+.kyso-tt .v23-ch button:hover {
+  background: rgb(205, 237, 232);
+}
+
+.kyso-tt .v23-ch svg {
+  width: 12px;
+  height: 12px;
+}
+
+.kyso-tt .v23-cr .clr {
+  border: 0px;
+  background: none;
+  color: var(--red);
+  font: 600 12px / 18px Inter, system-ui, sans-serif;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.kyso-tt .v23-cr .res {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-cr .res b {
+  color: var(--tx);
+  font-size: 14px;
+}
+
+.kyso-tt .v23-adv {
+  display: none;
+  margin: 0px 0px 12px;
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  font: 14px / 20px Inter, system-ui, sans-serif;
+  color: var(--tx);
+}
+
+.kyso-tt .v23-adv.on {
+  display: block;
+}
+
+.kyso-tt .v23-adv-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--div);
+}
+
+.kyso-tt .v23-adv-h b {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kyso-tt .v23-adv-h b svg {
+  width: 16px;
+  height: 16px;
+  color: var(--pri-press);
+}
+
+.kyso-tt .v23-adv-h .m {
+  font-size: 12px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-adv-h .x {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--bd);
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-adv-h .x svg {
+  width: 14px;
+  height: 14px;
+}
+
+.kyso-tt .v23-adv-b {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kyso-tt .v23-fg {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  gap: 12px 16px;
+}
+
+.kyso-tt .v23-fd {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0px;
+}
+
+.kyso-tt .v23-fd.w2 {
+  grid-column: span 2;
+}
+
+.kyso-tt .v23-fd > span {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-fd input {
+  height: 36px;
+  border: 1px solid var(--bd-in);
+  border-radius: 6px;
+  padding: 0px 12px;
+  font: 14px / 20px Inter, system-ui, sans-serif;
+  color: var(--tx-in);
+  background: rgb(255, 255, 255);
+  width: 100%;
+  min-width: 0px;
+}
+
+.kyso-tt .v23-fd input:focus {
+  outline: 0px;
+  border-color: var(--pri);
+}
+
+.kyso-tt .v23-dr {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kyso-tt .v23-dr i {
+  font-style: normal;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-dr input {
+  padding: 0px 8px;
+}
+
+.kyso-tt .v23-ms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.kyso-tt .v23-ms button {
+  border: 1px solid var(--bd-in);
+  background: rgb(255, 255, 255);
+  border-radius: 14px;
+  padding: 3px 10px;
+  font: 500 12px / 18px Inter, system-ui, sans-serif;
+  color: var(--tx);
+  cursor: pointer;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kyso-tt .v23-ms button:hover {
+  border-color: var(--pri);
+}
+
+.kyso-tt .v23-ms button[aria-pressed="true"] {
+  background: var(--pri-light);
+  border-color: var(--pri);
+  color: var(--pri-press);
+  font-weight: 600;
+}
+
+.kyso-tt .v23-adv-f {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--div);
+  background: var(--subtle);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.kyso-tt .v23-adv-f .pv {
+  font-size: 12px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v23-adv-f .pv b {
+  color: var(--tx);
+  font-size: 14px;
+}
+
+.kyso-tt .v23-adv-f .sp {
+  flex: 1 1 0%;
+}
+
+.kyso-tt .v23-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--tx);
+  background: rgb(255, 255, 255);
+  color: var(--tx);
+  font: 600 14px / 20px Inter, system-ui, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.kyso-tt .v23-btn:hover {
+  background: var(--subtle);
+}
+
+.kyso-tt .v23-btn.pri {
+  background: var(--pri-dark);
+  border-color: var(--pri-dark);
+  color: rgb(255, 255, 255);
+}
+
+.kyso-tt .v23-btn.pri:hover {
+  background: rgb(0, 87, 74);
+}
+
+.kyso-tt .v23-btn.ghost {
+  border-color: var(--bd);
+}
+
+.kyso-tt tr.v23-hide {
+  display: none !important;
+}
+
+.kyso-tt .v23-empty td {
+  text-align: center !important;
+  color: var(--tx2) !important;
+  height: 48px !important;
+}
+
+@container (max-width: 1300px) {
+  .kyso-tt .v23-fg {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+  }
+
+.kyso-tt .v23-q .v23-qin {
+  border: 0px !important;
+  outline: 0px !important;
+  height: 34px !important;
+  padding: 0px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  font: 14px / 20px Inter, system-ui, sans-serif !important;
+  color: var(--tx-in) !important;
+}
+
+.kyso-tt .v23-sel select {
+  max-width: 300px;
+  appearance: none !important;
+  height: 36px !important;
+  border: 1px solid var(--bd-in) !important;
+  border-radius: 6px !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23202A36' stroke-width='1.8'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 10px center no-repeat rgb(255, 255, 255) !important;
+  padding: 0px 34px 0px 12px !important;
+  font: 14px / 20px Inter, system-ui, sans-serif !important;
+  color: var(--tx-in) !important;
+  width: auto !important;
+}
+
+.kyso-tt .v23-sel.on select {
+  border-color: var(--pri) !important;
+  background-color: var(--pri-light) !important;
+  color: var(--pri-press) !important;
+  font-weight: 600 !important;
+}
+
+.kyso-tt .v23-mainh {
+  display: contents;
+}
+
+.kyso-tt .v23-std {
+  display: none !important;
+}
+
+.kyso-tt .v23-advb:focus-visible,
+.kyso-tt .v23-btn:focus-visible,
+.kyso-tt .v23-ms button:focus-visible {
+  outline: 2px solid var(--pri);
+  outline-offset: 2px;
+}
+
+.kyso-tt .v23-advb:focus-visible,
+.kyso-tt .v23-btn:focus-visible {
+  outline: 2px solid var(--pri);
+  outline-offset: 2px;
+}
+
+.kyso-tt .v23-tb {
+  padding: 0px;
+}
+
+.kyso-tt .v23-cr {
+  padding: 0px;
+}
+
+.kyso-tt .v23-adv {
+  margin: 0px;
+}
+
+.kyso-tt .v23-qin {
+  width: 100%;
+  font: 14px / 20px Inter, system-ui, sans-serif;
+  color: rgb(47, 47, 47);
+  border: 0px !important;
+  outline: 0px !important;
+  background: transparent !important;
+  height: 34px !important;
+  padding: 0px !important;
+}
+
+.kyso-tt .v18-cap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tx2);
+}
+
+.kyso-tt .v18-cap .seg button {
+  height: 28px;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+
+.kyso-tt .v18-caph {
+  flex-basis: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tx2);
+}
+

@@ -1,0 +1,12 @@
+/* Trang demo (không thuộc component). Nền và bề rộng như vùng nội dung tab của Chi tiết vụ án trong V41 (1320px). */
+html, body { margin: 0; background: #F7F8FA; }
+
+.demo-toast {
+  position: fixed; right: 16px; bottom: 16px; z-index: 2700; /* trên cửa sổ hồ sơ V33 (2590–2620) */
+  background: #202A36; color: #fff; padding: 10px 16px; border-radius: 8px;
+  font: 14px/20px Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+}
+.demo {
+  padding:24px
+}
